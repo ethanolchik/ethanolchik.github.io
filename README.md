@@ -1,2 +1,0 @@
-# ethanolchik.github.io
-Portfolio

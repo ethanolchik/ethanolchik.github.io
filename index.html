@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&amp;display=swap" rel="stylesheet">
+    <body>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="container">
+            <div class="intro" align="center">
+                <h1>Hello, I'm <standout>Ethan</standout></h1>
+                <p>I'm a programmer in Year 12 studying <standout>Maths, Physics</standout> and <standout>Computer Science</standout>.</p>
+
+                <div class="socials">
+                    <img class="socials-icon" src="assets/github.png" alt="GitHub">
+                    <img class="socials-icon" src="assets/linkedin.png" alt="LinkedIn">
+                </div>
+            </div>
+            <div id="about" class="about" align="center">
+                <h2>About Me</h2>
+                <div class="about-description" align="left">
+                    <p>I'm a student at <standout>JFS</standout> in London, studying Maths, Physics and Computer Science. I'm passionate about programming and have been coding for over 4 years. I'm currently interested in <standout>Compilers</standout>, <standout>Algorithms</standout> and <standout>Game Development</standout>.<br/><br/>I am currently teaching myself the <standout>Rust programming Language</standout>.</p>
+                </div>
+            </div>
+            <!-- <div id="project" class="projects">
+                
+            </div> -->
+            <div id="contact" class="contact">
+                <h2>Contact Me</h2>
+                <div class="contact-form">
+                    <form action="submit.php" method="post">
+                        <input type="text" name="name" placeholder="Name" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                        <textarea name="message" placeholder="Message" required></textarea>
+                        <input type="submit" value="Send">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>

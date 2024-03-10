@@ -1,0 +1,196 @@
+* {
+    font-family: "Source Sans Pro", sans-serif;
+    background-color: rgb(245, 245, 245);
+    box-sizing: border-box;
+
+    animation: easeInScreen 0.5s ease-in backwards;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    background-color: rgb(245, 245, 245);
+    display: flex;
+    justify-content: right;
+    font-family: "Source Sans Pro", sans-serif;
+    user-select: none;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.navbar li {
+    margin: 0 10px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: rgb(65, 65, 65);
+    padding: 10px 15px;
+}
+
+.navbar a:hover {
+    background-color: #e2e2e2;
+    transition: color 0.2s, background-color 0.2s;
+}
+
+h1 {
+    font-size: 5em;
+    margin-bottom: 10px;
+    background: 0;
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    background: 0;
+}
+
+p {
+    background: 0;
+}
+
+standout {
+    color: gold;
+    background: 0;
+}
+
+.intro {
+    color: rgb(243, 243, 243);
+    position: relative;
+    padding: 20px;
+    background-image: linear-gradient(to right, rgba(39, 69, 202, 0.8), rgba(0, 3, 185, 0.8)), url("assets/flat-mountains.svg");
+    
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    width: 100%;
+    border-radius: 10px;
+    justify-content: center;
+
+    animation: easeInSection 0.7s ease-in backwards;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    background: 0;
+}
+
+.socials-icon {
+    height: 25px;
+    width: 25px;
+    margin: 0 10px;
+    background: 0;
+    user-select: none;
+}
+
+.socials-icon:hover {
+    transform: scale(1.2);
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.about {
+    color: rgb(243, 243, 243);
+    position: relative;
+    padding: 20px;
+    margin-top: 20px;
+    background-image: linear-gradient(to right, rgba(39, 69, 202, 0.8), rgba(0, 3, 185, 0.8));
+    
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    width: 100%;
+    border-radius: 10px;
+    justify-content: center;
+
+    animation: easeInSection 0.7s ease-in backwards;
+}
+
+.about-description {
+    margin-top: 100px;
+    margin-right: 67%;
+    max-width: 800px;
+    background: 0;
+    opacity: 0;
+}
+
+.about-description.visible {
+    opacity: 1;
+    animation: easeInSection 1s ease-in backwards;
+}
+
+.contact {
+    /* email form */
+    color: rgb(243, 243, 243);
+    position: relative;
+    padding: 20px;
+    margin-top: 20px;
+    background-image: linear-gradient(to right, rgba(39, 69, 202, 0.8), rgba(0, 3, 185, 0.8));
+    border-radius: 10px;
+}
+
+.contact-form {
+    /* nice looking contact form */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 10px;
+    background: 0;
+}
+
+.contact-form textarea {
+    height: 100px;
+    background: 0;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background-color: rgb(65, 65, 65);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: rgba(0, 3, 185, 0.8);
+}
+
+.contact-form button:hover {
+    background-color: #333333;
+    background: rgba(0, 3, 185, 0.8);
+}
+
+/* animations */
+@keyframes easeInScreen {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes easeInSection {
+    0% {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
