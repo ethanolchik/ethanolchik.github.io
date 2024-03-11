@@ -1,5 +1,7 @@
 <?php
 
+echo "test";
+
 if (isset($_POST['submit'])) {
   // Set recipient email address
   $to = "your_email@example.com";
