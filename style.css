@@ -3,7 +3,7 @@
     background-color: rgb(245, 245, 245);
     box-sizing: border-box;
 
-    animation: easeInScreen 0.5s ease-in backwards;
+    animation: easeInScreen 0.2s ease-in backwards;
 }
 
 html {
@@ -85,7 +85,7 @@ tempp {
     border-radius: 10px;
     justify-content: center;
 
-    animation: easeInSection 0.7s ease-in backwards;
+    animation: easeInSection 0.7s;
 }
 
 .socials {
@@ -114,7 +114,7 @@ tempp {
     position: relative;
     padding: 20px;
     margin-top: 20px;
-    background-image: linear-gradient(to right, rgba(39, 69, 202, 0.8), rgba(0, 3, 185, 0.8));
+    background-image: linear-gradient(to right, rgba(39, 69, 202, 0.8), rgba(0, 3, 185, 0.8)), url("assets/common-bg.svg");
     
     background-size: cover;
     background-position: center;
@@ -123,7 +123,7 @@ tempp {
     border-radius: 10px;
     justify-content: center;
 
-    animation: easeInSection 0.7s ease-in backwards;
+    animation: easeInSection 0.7s;
 }
 
 .about-description {
@@ -137,6 +137,47 @@ tempp {
 .about-description.visible {
     opacity: 1;
     animation: easeInSection 1s ease-in backwards;
+}
+
+.about-skills {
+    margin-top: -200px;
+    margin-left: 67%;
+    max-width: 800px;
+    background: 0;
+    opacity: 0;
+}
+
+.about-skills.visible {
+    opacity: 1;
+    animation: easeInSection 1s ease-in backwards;
+}
+
+.about-skills ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: 0;
+}
+
+.about-skills li {
+    margin: 10px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: rgba(0, 3, 185, 0.8);
+    color: white;
+    transition: background-color 0.2s;
+
+    user-select: none;
+}
+
+.about-skills li:hover {
+    background-color: rgba(0, 3, 185, 1);
+    transition: background-color 0.2s;
+}
+
+.about-skills h3 {
+    background: 0;
 }
 
 .contact {
@@ -196,22 +237,23 @@ tempp {
 }
 
 .container {
-    background-image:linear-gradient(to left, rgba(39, 69, 202, 0.8), rgba(0, 3, 185, 0.8)), url("assets/common-bg.svg");
+    background-image: linear-gradient(to left, rgba(39, 69, 202, 0.8), rgba(0, 3, 185, 0.8)), url("assets/common-bg.svg");
     border-radius: 10px;
     color: rgb(243, 243, 243);
 }
 
 .projects {
-    color: rgb(243, 243, 243);
+    color: rgba(243, 243, 243);
     position: relative;
     padding: 20px;
     background-image: linear-gradient(to left, rgba(39, 69, 202, 0.8), rgba(0, 3, 185, 0.8)), url("assets/common-bg.svg");
-    
+
     display: flex;
     flex-direction:row;
-
+    
     background-size: cover;
     background-position: center;
+    /* margin-top: 50px; */
     height: 100vh;
     width: 100%;
     border-radius: 10px;
@@ -219,13 +261,17 @@ tempp {
     align-items: center;
 }
 
-.projects h1 {
+.container h1 {
     align-self: center;
-    margin-bottom: 20px;
+    justify-content: center;
+    margin-top: -1px;
+    margin-bottom: 10px;
 }
 
 .project {
-    margin-top: 30px;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
     padding: 20px;
 
     position: relative;
@@ -241,32 +287,33 @@ tempp {
     
     border: 1px solid rgba(0, 3, 185, 0.8);
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 3, 185, 0.8);
+    box-shadow: 0 0 20px rgba(0, 3, 185, 0.8);
 
-    transition: width 0.2s;
+    transition: height 0.2s;
 }
 
 .project img {
-    width: 320px;
-    height: 480px;
+    width: 345px;
+    height: 180px;
 
-    margin-left: 5%;
+    margin-right: 5%;
 
     user-select: none;
     border-radius: 10px;
 
+    transform: scale(0.9);
     
-    transition: transform 0.2s;
+    transition: height, transform;
 }
 
 .project p {
     opacity: 0;
 
-    transition: opacity 0.2s, transform 0.2s;
+    transition: opacity 0.2s;
 }
 
 .project tempp {
-    margin-top: 20px;
+    margin-top: 15px;
     align-self: center;
     opacity: 1;
 }
@@ -277,6 +324,7 @@ tempp {
 
 .project:hover {
     height: 450px;
+    cursor: pointer;
 
     transition: height 0.2s;
 }
@@ -284,14 +332,14 @@ tempp {
 .project:hover p {
     opacity: 1;
 
-    transition: opacity 0.2s;
+    transition: transform, opacity 0.2s;
 }
 
 .project:hover img {
-    height: 155px;
-    transform: scale(1.1);
+    height: 180px;
+    width: 345px;
 
-    transition: transform 0.2s;
+    transition: height, width;
 }
 
 /* animations */

@@ -13,7 +13,7 @@ socialIcons.forEach(function(icon) {
 
 
 const textElement = document.querySelector('.about-description');
-const observer = new IntersectionObserver((entries) => {
+const observer1 = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.intersectionRatio > 0) {
             textElement.classList.add('visible');
@@ -24,4 +24,18 @@ const observer = new IntersectionObserver((entries) => {
     threshold: 0
 });
 
-observer.observe(textElement);
+observer1.observe(textElement);
+
+const skillsElement = document.querySelector('.about-skills');
+const observer2 = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.intersectionRatio > 0) {
+            skillsElement.classList.add('visible');
+        }
+    });
+}, {
+    root: null,
+    threshold: 0
+});
+
+observer2.observe(skillsElement);
